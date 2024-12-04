@@ -1,10 +1,3 @@
-# renovate-config
-
-> [Renovate][] settings
-> shared across [Fabric Test][] projects
-
-## Usage
-
 Paste the following content
 in a `renovate.json` file in the repository root:
 
@@ -16,6 +9,3 @@ in a `renovate.json` file in the repository root:
   ]
 }
 ```
-
-[fabric test]: https://fabricte.st/
-[renovate]: https://www.mend.io/renovate/
