@@ -1,6 +1,7 @@
 # renovate-config
 
-[Renovate][] settings shared across [Fabric Test][] projects.
+> [Renovate][] settings
+> shared across [Fabric Test][] projects
 
 ## Usage
 
@@ -16,5 +17,5 @@ in a `renovate.json` file in the repository root:
 }
 ```
 
-[fabric test]: https://fabricte.st
+[fabric test]: https://fabricte.st/
 [renovate]: https://www.mend.io/renovate/
