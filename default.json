@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "config:best-practices",
+    "customManagers:githubActionsVersions",
+    "schedule:daily",
+    ":prImmediately",
+    ":rebaseStalePrs"
+  ],
+  "labels": [
+    "dependency updates"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  }
+}
