@@ -7,7 +7,7 @@
     ":rebaseStalePrs"
   ],
   "labels": [
-    "dependency updates"
+    "dependency update"
   ],
   "lockFileMaintenance": {
     "enabled": true
