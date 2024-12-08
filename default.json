@@ -2,6 +2,7 @@
   "extends": [
     "config:best-practices",
     "customManagers:githubActionsVersions",
+    "customManagers:tfvarsVersions",
     "schedule:daily",
     ":prImmediately",
     ":rebaseStalePrs"
