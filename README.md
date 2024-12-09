@@ -1,5 +1,4 @@
-```sh
-cat >renovate.json <<EOF
+```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
@@ -7,8 +6,4 @@ cat >renovate.json <<EOF
   ],
   "forkProcessing": "enabled"
 }
-EOF
-git add renovate.json
-git commit -m 'chore: automate dependency updates'
-git push
 ```

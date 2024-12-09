@@ -3,16 +3,12 @@
     "config:best-practices",
     "customManagers:githubActionsVersions",
     "customManagers:tfvarsVersions",
-    "schedule:daily",
-    ":prImmediately",
-    ":rebaseStalePrs"
+    "default:label(dependency update)",
+    "default:maintainLockFilesWeekly",
+    "default:prImmediately",
+    "default:rebaseStalePrs",
+    "schedule:weekly"
   ],
-  "labels": [
-    "dependency update"
-  ],
-  "lockFileMaintenance": {
-    "enabled": true
-  },
   "nix": {
     "enabled": true
   }
