@@ -17,5 +17,10 @@
   ],
   "nix": {
     "enabled": true
+  },
+  "vulnerabilityAlerts": {
+    "extends": [
+      "default:label(security)"
+    ]
   }
 }
