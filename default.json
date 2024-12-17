@@ -4,6 +4,7 @@
     "config:best-practices",
     "customManagers:githubActionsVersions",
     "customManagers:tfvarsVersions",
+    "default:disableRateLimiting",
     "default:label(dependency update)",
     "default:maintainLockFilesWeekly",
     "default:prImmediately",
