@@ -18,6 +18,7 @@
   "nix": {
     "enabled": true
   },
+  "onboardingConfigFileName": ".github/renovate.json",
   "vulnerabilityAlerts": {
     "extends": [
       "default:label(security)"
