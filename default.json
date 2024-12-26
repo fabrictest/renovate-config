@@ -11,6 +11,19 @@
     "default:rebaseStalePrs",
     "schedule:weekly"
   ],
+  "customManagers": [
+    {
+      "type": "regex",
+      "fileMatch": [
+        "(?:^|/)(?:workflow-templates|\\.github/(?:workflows|actions))/.+\\.ya?ml$",
+        "(?:^|/)action\\.ya?ml$"
+      ],
+      "matchStrings": [
+        "\\s*-\\s*(?<depName>macos|ubuntu|windows)-(?<currentValue>[\\d.]+)"
+      ],
+      "datasourceTemplate": "github-runners"
+    }
+  ],
   "gitIgnoredAuthors": [
     "github-actions[bot]@users.noreply.github.com",
     "41898282+github-actions[bot]@users.noreply.github.com"
