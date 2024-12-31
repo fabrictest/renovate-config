@@ -13,18 +13,31 @@
   ],
   "customManagers": [
     {
+      "description": "Update mentions to GitHub runners in GitHub Actions files.",
       "type": "regex",
       "fileMatch": [
         "(?:^|/)(?:workflow-templates|\\.github/(?:workflows|actions))/.+\\.ya?ml$",
         "(?:^|/)action\\.ya?ml$"
       ],
       "matchStrings": [
-        "\\s*-\\s*(?<depName>macos|ubuntu|windows)-(?<currentValue>[\\d.]+)"
+        "\"?(?<depName>macos|ubuntu|windows)-(?<currentValue>[\\d.]+)\"?"
       ],
       "datasourceTemplate": "github-runners"
+    },
+    {
+      "description": "Update *_VERSION variables marked with `renovate` pragma comments. Variables match case-insensitively, so `*_version` variables also match.",
+      "type": "regex",
+      "fileMatch": [
+        "*"
+      ],
+      "matchStrings": [
+        "^\\s*(?:#|\/\/|\/\\*|--|<!--)\\s*renovate:\\s*datasource=(?<datasource>\\S*)(?:\\s+depName=(?<depName>\\S*))?(?:\\s+versioning=(?<versioning>\\S*))?\\s+\\S*[-_.]?(?:[Vv][Ee][Rr][Ss][Ii][Oo][Nn])(?:\\s*[:=])?\\s*(?<currentValue>\\S+)"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver-coerced{{/if}}"
     }
   ],
   "gitIgnoredAuthors": [
+
     "github-actions[bot]@users.noreply.github.com",
     "41898282+github-actions[bot]@users.noreply.github.com"
   ],
@@ -43,6 +56,7 @@
       "extends": "default:semanticPrefixFix"
     }
   ],
+
   "vulnerabilityAlerts": {
     "extends": [
       "default:label(security)"
