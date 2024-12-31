@@ -28,7 +28,7 @@
       "description": "Update *_VERSION variables marked with `renovate` pragma comments. Variables match case-insensitively, so `*_version` variables also match.",
       "type": "regex",
       "fileMatch": [
-        "*"
+        ".*"
       ],
       "matchStrings": [
         "^\\s*(?:#|\/\/|\/\\*|--|<!--)\\s*renovate:\\s*datasource=(?<datasource>\\S*)(?:\\s+depName=(?<depName>\\S*))?(?:\\s+versioning=(?<versioning>\\S*))?\\s+\\S*[-_.]?(?:[Vv][Ee][Rr][Ss][Ii][Oo][Nn])(?:\\s*[:=])?\\s*(?<currentValue>\\S+)"
