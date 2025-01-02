@@ -31,13 +31,12 @@
         ".*"
       ],
       "matchStrings": [
-        "^\\s*(?:#|\/\/|\/\\*|--|<!--)\\s*renovate:\\s*datasource=(?<datasource>\\S*)(?:\\s+depName=(?<depName>\\S*))?(?:\\s+versioning=(?<versioning>\\S*))?\\s+\\S*[-_.]?(?:[Vv][Ee][Rr][Ss][Ii][Oo][Nn]|[Dd][Ee][Ff][Aa][Uu][Ll][Tt])(?:\\s*[:=])?)\\s*(?<currentValue>\\S+)"
+        "^\\s*(?:#|\/\/|\/\\*|--|<!--)\\s*renovate:\\s*datasource=(?<datasource>\\S*)(?:\\s+depName=(?<depName>\\S*))?(?:\\s+versioning=(?<versioning>\\S*))?\\s+\\S*[-_.]?(?:[Vv][Ee][Rr][Ss][Ii][Oo][Nn]|[Dd][Ee][Ff][Aa][Uu][Ll][Tt])(?:\\s*[:=]?)\\s*(?<currentValue>\\S+)"
       ],
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver-coerced{{/if}}"
     }
   ],
   "gitIgnoredAuthors": [
-
     "github-actions[bot]@users.noreply.github.com",
     "41898282+github-actions[bot]@users.noreply.github.com"
   ],
