@@ -37,8 +37,8 @@
     }
   ],
   "gitIgnoredAuthors": [
-    "github-actions[bot]@users.noreply.github.com",
-    "41898282+github-actions[bot]@users.noreply.github.com"
+    "41898282+github-actions[bot]@users.noreply.github.com",
+    "192157242+the-accuser[bot]@users.noreply.github.com"
   ],
   "nix": {
     "enabled": true
@@ -55,7 +55,6 @@
       "extends": "default:semanticPrefixFix"
     }
   ],
-
   "vulnerabilityAlerts": {
     "extends": [
       "default:label(security)"
