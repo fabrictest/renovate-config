@@ -16,7 +16,7 @@
       "description": "Update mentions to GitHub runners in GitHub Actions files.",
       "type": "regex",
       "fileMatch": [
-        "(?:^|/)(?:workflow-templates|\\.github/(?:workflows|actions))/.+\\.ya?ml$",
+        "(?:^|/)(?:workflow-templates|\\.github/workflows)/.+\\.ya?ml$",
         "(?:^|/)action\\.ya?ml$"
       ],
       "matchStrings": [
