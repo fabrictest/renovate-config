@@ -8,8 +8,7 @@
     "default:label(dependency update)",
     "default:maintainLockFilesWeekly",
     "default:prImmediately",
-    "default:rebaseStalePrs",
-    "schedule:weekly"
+    "default:rebaseStalePrs"
   ],
   "customManagers": [
     {
@@ -31,7 +30,7 @@
         ".*"
       ],
       "matchStrings": [
-        "^\\s*(?:#|\\/\\/|\\*|--|<!--|;)\\s*renovate:\\s*datasource=(?<datasource>\\S*)(?:\\s+depName=(?<depName>\\S*))?(?:\\s+versioning=(?<versioning>\\S*))?(?:\\s*(?:\\\\*\\/|-->))?\\s+(?:#|\\/\\/|\\*|--|<!--|;)[^-_.]*[-_.]?(?:[Vv][Ee][Rr][Ss][Ii][Oo][Nn]|[Dd][Ee][Ff][Aa][Uu][Ll][Tt])\\s*:?=?\\s*\"?(?<currentValue>[-\\w.]+)\"?"
+        "^\\s*(?:#|\\\/\\\/+|\\\/\\*+|--+|<!--+|;+)\\s*renovate:\\s*datasource=(?<datasource>\\S*)(?:\\s+depName=(?<depName>\\S*))?(?:\\s+versioning=(?<versioning>\\S*))?(?:\\s*(?:\\*+\\\/|--+>))?\\s+(?:#|\\\/\\\/+|\\\/\\*+|--+|<!--+|;+)[^-\\w.]*[-\\w.]?(?:[Vv][Ee][Rr][Ss][Ii][Oo][Nn]|[Dd][Ee][Ff][Aa][Uu][Ll][Tt])[\\s:=]+\"?(?<currentValue>[-\\w.]+)\"?"
       ],
       "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver-coerced{{/if}}"
     }
@@ -55,6 +54,9 @@
       ],
       "extends": "default:semanticPrefixFix"
     }
+  ],
+  "schedule": [
+    "* * 1,15 * *"
   ],
   "vulnerabilityAlerts": {
     "extends": [
