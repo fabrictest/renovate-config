@@ -5,7 +5,7 @@
     "customManagers:githubActionsVersions",
     "customManagers:tfvarsVersions",
     "default:disableRateLimiting",
-    "default:label(dependency update)",
+    "default:label(deps)",
     "default:maintainLockFilesWeekly",
     "default:prImmediately",
     "default:rebaseStalePrs"
@@ -60,7 +60,7 @@
   ],
   "vulnerabilityAlerts": {
     "extends": [
-      "default:label(security)"
+      "default:label(vuln)"
     ]
   }
 }
