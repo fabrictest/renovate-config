@@ -43,7 +43,7 @@
   "nix": {
     "enabled": true
   },
-  "onboardingConfigFileName": ".github/renovate.json",
+  "onboardingConfigFileName": ".renovaterc.json",
   "packageRules": [
     {
       "description": "Treat dependencies in GitHub action files as main dependencies",
