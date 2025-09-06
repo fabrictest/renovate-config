@@ -26,9 +26,7 @@
     {
       "description": "Update `*VERSION` and `*DEFAULT` variables marked with `renovate` pragma comments. Variables match case-insensitively, so `*version` and `*default` variables also match.",
       "type": "regex",
-      "fileMatch": [
-        ".*"
-      ],
+      "fileMatch": [".*"],
       "matchStrings": [
         "^\\s*(?:#|\\\/\\\/+|\\\/\\*+|--+|<!--+|;+)\\s*renovate:\\s*datasource=(?<datasource>\\S*)(?:\\s+depName=(?<depName>\\S*))?(?:\\s+versioning=(?<versioning>\\S*))?(?:\\s*(?:\\*+\\\/|--+>))?\\s+(?:#|\\\/\\\/+|\\\/\\*+|--+|<!--+|;+)[^-\\w.]*[-\\w.]?(?:[Vv][Ee][Rr][Ss][Ii][Oo][Nn]|[Dd][Ee][Ff][Aa][Uu][Ll][Tt])[\\s:=]+\"?(?<currentValue>[-\\w.]+)\"?"
       ],
@@ -55,12 +53,7 @@
       "extends": "default:semanticPrefixFix"
     }
   ],
-  "schedule": [
-    "* * 1,15 * *"
-  ],
   "vulnerabilityAlerts": {
-    "extends": [
-      "default:label(vuln)"
-    ]
+    "extends": ["default:label(vuln)"]
   }
 }
